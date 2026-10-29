@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-ocean-50: #eefbfa;
+  --color-ocean-100: #d5f4f2;
+  --color-ocean-200: #afe8e6;
+  --color-ocean-300: #78d5d4;
+  --color-ocean-400: #3fb8ba;
+  --color-ocean-500: #249ca0;
+  --color-ocean-600: #1e7d83;
+  --color-ocean-700: #1d646a;
+  --color-ocean-800: #1d5156;
+  --color-ocean-900: #0f3237;
+  --color-ocean-950: #081f23;
+
+  --color-sand-50: #fff9ed;
+  --color-sand-100: #fff1d3;
+  --color-sand-200: #ffdfa5;
+  --color-sand-300: #ffc76d;
+  --color-sand-400: #ffa532;
+  --color-sand-500: #fb8a0a;
+  --color-sand-600: #e96e00;
+
+  --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+}
+
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-slate-800 antialiased; }
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
