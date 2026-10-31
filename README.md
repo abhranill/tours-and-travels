@@ -37,7 +37,7 @@ The page is composed of the following sections in order:
 | — | Booking modal (global overlay) | – |
 ---
 ## Features
-### Visitor‑facing
+# Visitor‑facing
 - **Immersive hero** with full‑bleed photography, gradient overlays, animated headline, trust badges and CTAs.
 - **Trip search widget** (destination, travel month, travellers) that scrolls to and filters the tour list.
 - **Destination bento grid** — clicking a destination filters tours for that place.
@@ -56,7 +56,7 @@ The page is composed of the following sections in order:
   - Confirmation screen on submit.
 - **Fully responsive** — mobile‑first layouts, hamburger menu, stacked forms, bottom‑sheet modal on small screens.
 - **Smooth‑scroll anchor navigation.**
-### Developer‑facing
+# Developer‑facing
 - Strict **TypeScript** throughout, including typed content models.
 - **Tailwind v4** `@theme` tokens for colours, fonts and keyframe animations.
 - Single‑file production build (`vite-plugin-singlefile`) — the entire site compiles into one `dist/index.html`.
@@ -107,7 +107,7 @@ The page is composed of the following sections in order:
 ```
 ---
 ## Getting Started
-### Prerequisites
+# Prerequisites
 - **Node.js ≥ 18** (20 LTS recommended)
 - **npm ≥ 9** (or pnpm / yarn)
 ### Installation
@@ -147,14 +147,14 @@ App
 | `onClearSearch()` | "Clear" chip / empty state | Clears `search`. |
 | `openBooking(tour?)` | Navbar CTA, TourCard *Book Now* | Sets `selectedTour` and opens the modal. |
 | `closeBooking()` | Modal ×, overlay, Esc, Done | Closes modal. |
-### Filtering logic (`Tours.tsx`)
+# Filtering logic (`Tours.tsx`)
 ```ts
 const haystack = [title, location, category, ...tags].join(" ").toLowerCase();
 const words    = query.split(/\s+/).filter(w => w.length > 2);
 match = !query || haystack.includes(query) || words.some(w => haystack.includes(w));
 ```
 Both the category pill **and** the search query must match for a tour to be shown. The list is memoised with `useMemo`.
-### Booking modal (`BookingModal.tsx`)
+# Booking modal (`BookingModal.tsx`)
 - Receives `open`, `tour`, `onClose`.
 - On open: resets internal state, pre‑selects `tour` (or the first tour), locks `document.body` scroll.
 - Registers a global `keydown` listener for **Escape**.
