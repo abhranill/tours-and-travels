@@ -1,7 +1,7 @@
 # Horizon Tours & Travel
 A modern, professional, fully responsive single‑page website for a tours and travel agency. Built with **React 19**, **TypeScript**, **Vite 7** and **Tailwind CSS v4**, it showcases destinations, tour packages, customer testimonials and includes an interactive booking flow, search/filtering and enquiry forms.
 > Live demo: run `npm run dev` locally (see [Getting Started](#getting-started)).
----
+------
 ## Table of Contents
 1. [Overview](#overview)
 2. [Features](#features)
@@ -35,7 +35,7 @@ The page is composed of the following sections in order:
 | 8 | Contact / Request a Quote | `#contact` |
 | 9 | Footer | – |
 | — | Booking modal (global overlay) | – |
----
+------
 ## Features
 # Visitor‑facing
 - **Immersive hero** with full‑bleed photography, gradient overlays, animated headline, trust badges and CTAs.
@@ -62,7 +62,7 @@ The page is composed of the following sections in order:
 - Single‑file production build (`vite-plugin-singlefile`) — the entire site compiles into one `dist/index.html`.
 - No global state library; simple, readable React hooks.
 - Zero backend dependencies — forms are client‑side demos ready to be wired to an API.
----
+------
 ## Tech Stack
 | Layer | Technology | Version |
 |-------|------------|---------|
@@ -75,7 +75,7 @@ The page is composed of the following sections in order:
 | Fonts | Google Fonts — *Playfair Display* (display) & *Inter* (body) | – |
 | Build plugin | vite-plugin-singlefile | 2.x |
 | Imagery | Pexels stock photography (hot‑linked) | – |
----
+------
 ## Project Structure
 ```
 .
@@ -121,7 +121,7 @@ npm install
 npm run dev
 ```
 Vite will print a local URL (typically `http://localhost:5173`). The page hot‑reloads on save.
----
+------
 ## Available Scripts
 | Command | Description |
 |---------|-------------|
@@ -129,7 +129,7 @@ Vite will print a local URL (typically `http://localhost:5173`). The page hot‑
 | `npm run build` | Type‑check and build an optimised production bundle into `dist/`. Output is a **single self‑contained `index.html`** (JS & CSS inlined). |
 | `npm run preview` | Serve the production build locally for a final check. |
 | `npx tsc --noEmit` | Run a standalone TypeScript type‑check. |
----
+------
 ## Application Architecture
 ### State flow
 All shared state lives in `App.tsx` and is passed down as props — no context or external store is needed for a page of this size.
