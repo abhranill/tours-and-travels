@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BookingModal from "./components/BookingModal";
 import type { Category, Tour } from "./data/content";
-
+//function
 export default function App() {
   const [category, setCategory] = useState<Category>("All");
   const [search, setSearch] = useState("");
